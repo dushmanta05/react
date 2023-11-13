@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Namaste React</title>
-    <link rel="stylesheet" href="./index.css"> <!--  -->
-</head>
-<body>
-
-    <!-- Even if we add Header and Footer separately React will render between them, so basically we can add React anywhere in project.
-    
-    But most of the time everything are kept inside the root, and using header, footer outside is not a good practice. -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- Even if we add Header and Footer separately React will render between them, so basically we can add React anywhere in project. But most of the time everything are kept inside the root, and using header, footer outside is not a good practice. -->
 
     <div id="header">Header</div>
     <div id="root">
+      <!-- Since "root" is used for injecting React element, React will override everything present inside the root before. So below 4 h1 will be overridden by React elements -->
 
-        <!-- Since "root" is used for injecting React element, React will override everything present inside the root before. So below 4 h1 will be overridden by React elements -->
+      <h1>Hello</h1>
+      <h1>Hello</h1>
+      <h1>Hello</h1>
+      <h1>Hello</h1>
 
-        <h1>Hello</h1>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
-
-        <!-- Mostly "Not Rendered" text is used inside root to know if React is rendering or not -->
+      <!-- Mostly "Not Rendered" text is used inside root to know if React is rendering or not -->
     </div>
     <div id="container">
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
     </div>
     <div id="footer">Footer</div>
-<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
 
-<!-- If we put the below script tag above the 2 packages which are above this line it'll not render, the error will be "React not defined" -->
+    <!-- If we put the below script tag above the 2 packages which are above this line it'll not render, the error will be "React not defined" -->
 
-<script src="./App.js"></script>
-</body>
+    <script src="./App.js"></script>
+  </body>
 </html>
